@@ -2,73 +2,165 @@
 <html lang="es">
 
 <head>
+    <link rel="stylesheet" href="estilo.css" type="text/css">
+    <link rel="icon" type="image/png" href="media/favicon.png" />
+    <title>Team Marinela</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>El grupo más choriflais</title>
-    <link rel="icon" type="image/png" href="media/favicon.png" />
-    <!-- Metadatos genéricos -->
-    <meta name="description" content="descripción de la página">
-    <meta name="image" content="media/imagen.png">
-    <!-- Metadatos Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="título de la página">
-    <meta name="twitter:description" content="descripción de la página">
-    <meta name="twitter:image:src" content="media/imagen.png">
-    <!-- Metadatos Open Graph (Facebook, Pinterest & LinkedIn) -->
-    <meta name="og:title" content="título de la página">
-    <meta name="og:description" content="descripción de la página">
-    <meta name="og:image" content="media/imagen.png">
-    <meta name="og:type" content="website">
-    <!-- Ahora vinculamos el estilo -->
-    <link rel="stylesheet" href="estilo.css" type="text/css">
+    <script src="portafolio.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>*nombre del equipo*</h1>
-        <h2>*descripción del equipo*</h2>
-    </header>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <source src="media/video.webm" type="video/webm">
-        <source src="media/video.mp4" type="video/mp4">
-    </video>
+
+    <div class="navbar">
+      <a type="image/png" href="media/favicon.png" class="navfavicon" ></a>
+      <a href="#home">Inicio</a>
+      <a href="#news">Nosotros</a>
+      <div class="dropdown">
+        <button class="dropbtn">Proyectos
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Fernanda Valdebenito</a>
+          <j href="#">Belen Pino</j>
+          <c href="#">Diego Álvarez</c>
+        </div>
+      </div>
+      </div>
+
+      <div class="container">
+        <img src="media/Equipo-color-original.png" alt="Foto del equipo (de izquierda a derecha, Fernanda Valdebenito, Belen Pino, Diego Álvarez)" style="width:100%;"></img>
+        <div class="centeredtxt">
+          <h1>TEAM MARINELA</h1>
+          <h2>Un equipo integral de alto impacto</h2>
+          </div>
+      </div>
+
+
+    <div class="responsive">
+        <div class="galleryf">
+          <a target="_blank" href="media/fernanda-seria.png">
+            <img src="media/fernanda-seria.png" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+
+    <div class="responsive">
+        <div class="galleryb">
+          <a target="_blank" href="media/belen-seria.png">
+            <img src="media/belen-seria.png" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+
+    <div class="responsive">
+        <div class="galleryd">
+          <a target="_blank" href="media/diego-serio.png">
+            <img src="media/diego-serio.png" alt="Northern Lights" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+
+    <div class="clearfix"></div>
+
+
+
+
+
     <main>
-        <section id="equipo">
-            <h3>Quiénes somos</h3>
-            <div class="integrante">
-                <h4>INTEGRANTE UNO</h4>
-                <address><a href="mailto:mail@uc.cl">mail@uc.cl</a></address>
-                <blockquote>Good design is as little design as possible <cite>Dieter Rams</cite></blockquote>
-            </div>
-            <div class="integrante">
-                <h4>INTEGRANTE DOS</h4>
-                <address><a href="mailto:mail@uc.cl">mail@uc.cl</a></address>
-                <blockquote>Design is intelligence made visible <cite>Alina Wheeler</cite></blockquote>
-            </div>
-            <div class="integrante">
-                <h4>INTEGRANTE TRES</h4>
-                <address><a href="mailto:mail@uc.cl">mail@uc.cl</a></address>
-                <blockquote>A designer is a planner with an aesthetic sense <cite>Bruno Munari</cite></blockquote>
-            </div>
-        </section>
-        <section id="portafolio">
-            <h3>Nuestros trabajos</h3>
-            <!--acá se colocan y organizan las cosas con programación-->
-        </section>
+
+      <div class="main">
+
+      <h1>MYLOGO.COM</h1>
+      <hr>
+
+      <h2>PORTFOLIO</h2>
+
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')">Todos</button>
+        <button class="btn" onclick="filterSelection('nature')">Fernanda</button>
+        <button class="btn" onclick="filterSelection('cars')">Belen</button>
+        <button class="btn" onclick="filterSelection('people')">Diego</button>
+      </div>
+
+      <!-- Portfolio Gallery Grid -->
+      <div class="row">
+        <div class="column cars">
+          <div class="content">
+            <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+            <h4>Mountains</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="content">
+          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+            <h4>Lights</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="content">
+          <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+            <h4>Forest</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+
+        <div class="column cars">
+          <div class="content">
+            <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+            <h4>Retro</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column cars">
+          <div class="content">
+          <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+            <h4>Fast</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column cars">
+          <div class="content">
+          <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+            <h4>Classic</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+
+        <div class="column people">
+          <div class="content">
+            <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+            <h4>Girl</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column people">
+          <div class="content">
+          <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+            <h4>Man</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column people">
+          <div class="content">
+          <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+      <!-- END GRID -->
+      </div>
+
+      <!-- END MAIN -->
+      </div>
+
     </main>
-    <footer>
-        <p>Procesos de Producción · sección web · segundo semestre · 2019</p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-    <script>
-        window.onload = function() {
-            var container = document.querySelector('#portafolio');
-            var msnry = new Masonry(portafolio, {
-                itemSelector: '.item'
-            });
-        };
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="portafolio.js"></script>
 </body>
 

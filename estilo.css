@@ -1,18 +1,137 @@
 @import url('https://fonts.googleapis.com/css?family=DM+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap');
 
-/* 
+/* BARRA DE NAVEGACIÓN */
 
-Así se escriben los comentario en CSS.
-Siempre se abren con slash asterisco, y
-se cierran con asterisco slash.
-
-*/
-
-*{
-    margin:0;
-    padding:0;
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
 }
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  color: white;
+  background-color: #f59a40;
+}
+
+.dropdown-content j {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content j:hover {
+  color: white;
+  background-color: #f7554d;
+}
+
+.dropdown-content c {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content c:hover {
+  color: white;
+  background-color: #4c8df5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* IMÁGEN DEL EQUIPO */
+
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+  max-height: 100%;
+}
+
+.container .center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100px;
+  height: auto;
+}
+
+.centeredtxt{
+  position: absolute;
+  background: rgba(225,227,236,.90);
+  width: 50%;
+  height: 25%;
+  top: 80%;
+  left: 50%;
+  border-radius:15px;
+  transform: translate(-50%, -50%);
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+@media only screen and (max-width: 800px) {
+  .centeredtxt {
+      border-radius: 8px;
+  }
+}
+
+
+/* TEXTOS */
+
 
 body{
     font-family:'DM Sans', sans-serif;
@@ -24,29 +143,41 @@ body{
 h1, h2{
     font-family:'Space Mono', monospace;
     color:#FFFFFF; /* lo básico, para evitar problemas */
-    color:rgba(255,255,255,0.8); /* si el navegador lo entiende, lo usa */
+    color:grey; /* si el navegador lo entiende, lo usa */
     text-align:center;
+    position: relative;
     letter-spacing:0.1em;
     font-weight:700;
+    line-height: 2rem;
 }
 
 h1{
-    font-size:3rem;
+    font-size:3.5rem;
 }
 
 h2{
-    font-size:2rem;
+    font-size:1.7rem;
     letter-spacing:0.1em;
 }
 
-@media screen and (max-width: 768px){
-    h1{ font-size:2.25rem; }
-    h2{ font-size:1.5rem; }
+@media screen and (max-width: 1300px){
+    h1{ font-size:2.5rem;  line-height: 1.4rem;}
+    h2{ font-size:1.2rem;  line-height: 1.4rem;}
 }
 
-@media screen and (max-width: 576px){
-    h1{ font-size:1.5rem; }
-    h2{ font-size:1rem; }
+@media screen and (max-width: 900px){
+    h1{ font-size:1.5rem;  line-height: 1rem;}
+    h2{ font-size:0.9rem;  line-height: 1rem;}
+}
+
+@media screen and (max-width: 650px){
+    h1{ font-size:1rem; }
+    h2{ font-size:0.7rem; }
+    .centeredtxt {
+      border-radius: 8px;
+      height: 30%;
+      top: 75%;
+    }
 }
 
 h3{
@@ -54,25 +185,17 @@ h3{
 }
 
 h5, h6{
-    font-weight:700;     
+    font-weight:700;
 }
 
-a{
-    color:rgb(155,0,0);
-    text-decoration:none;
-}
-
-a:hover{
-    color:rgb(255,0,0);
-    text-decoration:underline;
-}
 
 header{
-    width:100%;
-    top:36%;
+    width: auto;
+    top:50%;
     position: absolute;
     text-align:center;
     z-index:9;
+    background-color: grey;
 }
 
 @media screen and (orientation: portrait){
@@ -89,193 +212,159 @@ main{
     width:100%;
 }
 
-/* 
-Puedes revisar detalles sobre el siguiente uso de flex 
-en https://www.taniarascia.com/easiest-flex-grid-ever/ 
-*/
+/* GALERÍA DE IMÁGENES DE EQUIPO */
 
-#equipo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    color:#fff /* lo mismo que #FFFFFF, simplificando pares iguales*/;
-    color:rgba(255,255,255,1);
-}
-
-#equipo a{
-    color:rgba(255,255,255,.7);
-}
-
-#equipo a:hover{
-    color:rgba(255,255,255,.9);
-}
-
-.integrante {
-    flex-basis: 100%;
-}
-
-.integrante:hover {
-    cursor:crosshair;
-}
-
-@media screen and (orientation: landscape){
-    .integrante { flex:1; }
-}
-
-.integrante h4{
-    padding: 2rem 2rem 0.25rem 2rem;
-}
-
-.integrante address{
-    padding: 0.25rem 2rem;
-    font-size:0.9em;
-    font-style:normal;
-}
-
-.integrante blockquote{
-    padding: 6rem 2rem 2rem 2rem;
-}
-
-@media screen and (orientation: landscape){
-    .integrante blockquote{
-        padding: 6rem 2rem 2rem 2rem;
-        max-width:50%;
-    }
-}
-
-.integrante blockquote cite {
-    display:block;
-    font-style: normal;
-    font-weight: 700;
-    font-size:.8rem;
-    letter-spacing : 0.1rem;
-    padding-top:0.25rem;
-    color:rgba(255,255,255,.75);
-}
-
-.integrante blockquote cite:before {
-    content:"— ";
-}
-
-.integrante:nth-of-type(1){
-    background-color:#F83277;
-    background-image:url('media/integrante-1a.png');
-    background-position: bottom right;
-    background-size:auto 90%;
-    background-repeat: no-repeat;
+.galleryf {
+  border: 0px;
 }
 
 
-.integrante:nth-of-type(2){
-    background:#F93332;
-    background-image:url('media/integrante-2a.png');
-    background-position: bottom right;
-    background-size:auto 90%;
-    background-repeat: no-repeat;
+.galleryf:hover {
+  opacity: 1;
+  content:url("media/fernanda-loca-color.png");
+  width:100%;
 }
 
-.integrante:nth-of-type(3){
-    background:#FA7633;
-    background-image:url('media/integrante-3a.png');
-    background-position: bottom right;
-    background-size:auto 90%;
-    background-repeat: no-repeat;
+.galleryf img {
+  width: 100%;
+  align: center;
+  height: auto;
 }
 
-.integrante:nth-of-type(1):hover{
-    background-color:#c2185b;
-    background-image:url('media/integrante-1b.png');
-    background-position: bottom right;
-    background-size:auto 90%;
-    background-repeat: no-repeat;
+.galleryb {
+  border: 0px;
 }
 
-.integrante:nth-of-type(2):hover{
-    background:#d32f2f;
-    background-image:url('media/integrante-2b.png');
-    background-position: bottom right;
-    background-size:auto 90%;
-    background-repeat: no-repeat;
+
+.galleryb:hover {
+  opacity: 1;
+  content:url("media/belen-loca-color.png");
+  width:100%;
 }
 
-.integrante:nth-of-type(3):hover{
-    background:#ef6c00;
-    background-image:url('media/integrante-3b.png');
-    background-position: bottom right;
-    background-size:auto 90%;
-    background-repeat: no-repeat;
+.galleryb img {
+  width: 100%;
+  align: center;
+  height: auto;
 }
 
-/*
-
-AHORA VAMOS POR PORTAFOLIO
-
-*/
-
-#portafolio{
-    width:100%;
-    padding:.25% 0;
-    background:linear-gradient(to bottom, #EEEEEE, #AAAAAA);
+.galleryd {
+  border: 0px;
 }
 
-.item {
-    width:23%;
-    margin:1%;
-    color:#333;
-    background:#eee;
-    box-shadow:0 0 5px rgba(0,0,0,.5);
+
+.galleryd:hover {
+  opacity: 1;
+  content:url("media/diego-loco-color.png");
+  width:100%;
 }
 
-@media screen and (max-width: 768px){
-    .item{
-        width:48%;
-        margin:1%;
-        background:#333;
-        color:#eee;
-    }
+.galleryd img {
+  width: 100%;
+  align: center;
+  height: auto;
 }
- @media screen and (max-width: 576px){
-     .item{
-         width:96%;
-         margin:2%;
-         background:#000;
-         color:#FFF;
-    }
+
+.desc {
+  padding: 15px;
+  text-align: center;
 }
- .item:hover{
-     cursor:crosshair;
+
+* {
+  box-sizing: border-box;
 }
- .item figure{
-     overflow:hidden;
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 33.3333%;
 }
- .item figure img{
-     width:100%;
-     height:auto;
-     margin-bottom:-4px;
-     filter: grayscale(1);
+
+
+@media only screen and (max-width: 800px) {
+  .responsive {
+    width: 100%;
+  }
 }
- .item:hover figure img{
-     transform:scale(2);
-     filter: grayscale(0);
-     transition:all ease-out 1s;
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
- .item h4{
-     font-size:1em;
-     letter-spacing:0.025em;
-     margin:5% 5% 3% 5%;
+
+/* PORTAFOLIO */
+
+* {
+  box-sizing: border-box;
 }
- .item p{
-     font-size:0.875em;
-     letter-spacing:0.05em;
-     margin:2% 5% 6% 5%;
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
 }
- footer{
-     width:100%;
-     padding:2.5em 0 2em 0;
-     text-align:center;
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
 }
- footer p{
-     text-transform:uppercase;
-     letter-spacing:0.1em;
-     font-size:0.9em;
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
 }
