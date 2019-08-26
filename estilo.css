@@ -20,7 +20,8 @@
 
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: green;
+  background-color: lightgrey;
+  color: black;
 }
 
 
@@ -201,10 +202,28 @@ main{
   height: auto;
 }
 
+.nombre {
+  padding: 15px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .desc {
   padding: 15px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .nombre {
+    font-size: 1rem;
+  }
+  .desc {
+    font-size: 0.6rem;
+  }
 }
 
 * {
