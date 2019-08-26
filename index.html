@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="estilo.css" type="text/css">
     <link rel="icon" type="image/png" href="media/favicon.png" />
-    <title>Team Marinela</title>
+    <title id="Inicio">Team Marinela</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="portafolio.js"></script>
@@ -13,17 +13,15 @@
 <body>
 
     <div class="navbar">
-      <a type="image/png" href="media/favicon.png" class="navfavicon" ></a>
-      <a href="#home">Inicio</a>
-      <a href="#news">Nosotros</a>
+      <a href="#Nosotros">Nosotros</a>
       <div class="dropdown">
-        <button class="dropbtn">Proyectos
+        <button href="#Portafolio" class="dropbtn">Proyectos
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="#">Fernanda Valdebenito</a>
-          <j href="#">Belen Pino</j>
-          <c href="#">Diego Álvarez</c>
+          <button class="btnf" onclick="filterSelection('fernanda')">Fernanda</button>
+          <button class="btnb" onclick="filterSelection('belen'); href(#portafolio)">Belen</button>
+          <button class="btnd" onclick="filterSelection('diego')">Diego</button>
         </div>
       </div>
       </div>
@@ -36,6 +34,7 @@
           </div>
       </div>
 
+<hr id="Nosotros">
 
     <div class="responsive">
         <div class="galleryf">
@@ -68,87 +67,121 @@
 
 
 
-
+<hr>
 
     <main>
 
       <div class="main">
 
-      <h1>MYLOGO.COM</h1>
-      <hr>
-
-      <h2>PORTFOLIO</h2>
+      <div class="containervid">
+        <video autoplay muted loop id="myVideo">
+          <source src="media/video.webm" type="video/webm">
+          <source src="media/video.mp4" type="video/mp4">
+        </video>
+        <div class="centeredtxtvid">
+          <h1>PORTAFOLIO</h1>
+          </div>
+      </div>
 
       <div id="myBtnContainer">
         <button class="btn active" onclick="filterSelection('all')">Todos</button>
-        <button class="btn" onclick="filterSelection('nature')">Fernanda</button>
-        <button class="btn" onclick="filterSelection('cars')">Belen</button>
-        <button class="btn" onclick="filterSelection('people')">Diego</button>
+        <button class="btnf" onclick="filterSelection('fernanda')">Fernanda</button>
+        <button class="btnb" onclick="filterSelection('belen')">Belen</button>
+        <button class="btnd" onclick="filterSelection('diego')">Diego</button>
       </div>
 
       <!-- Portfolio Gallery Grid -->
       <div class="row">
-        <div class="column cars">
-          <div class="content">
-            <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+        <div class="column diego">
+          <div class="contentd">
+            <img src="media/Diego-Daeki-1.jpg" alt="Daeki" style="width:100%">
             <h4>Mountains</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
         </div>
-        <div class="column nature">
-          <div class="content">
-          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+        <div class="column diego">
+          <div class="contentd">
+          <img src="media/Diego-SIID-1.jpg" alt="SIID" style="width:100%">
             <h4>Lights</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
         </div>
-        <div class="column nature">
-          <div class="content">
-          <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+        <div class="column diego">
+          <div class="contentd">
+          <img src="media/Diego-Modelado3D-1.jpg" alt="Modelado 3D" style="width:100%">
+            <h4>Forest</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column diego">
+          <div class="contentd">
+          <img src="media/Diego-sketch-1.jpg" alt="Sketch" style="width:100%">
             <h4>Forest</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
         </div>
 
-        <div class="column cars">
-          <div class="content">
-            <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
-            <h4>Retro</h4>
+        <div class="column fernanda">
+          <div class="contentf">
+            <img src="media/Fernanda-dexia.jpg" alt="Dexia" style="width:100%">
+            <h4>Retroxx</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
         </div>
-        <div class="column cars">
-          <div class="content">
-          <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+
+        <div class="column fernanda">
+          <div class="contentf">
+          <img src="media/Fernanda-trena-1.jpg" alt="Trena" style="width:100%">
             <h4>Fast</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
         </div>
-        <div class="column cars">
-          <div class="content">
-          <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+        <div class="column fernanda">
+          <div class="contentf">
+          <img src="media/Fernanda-pulcra.jpg" alt="Pulcra" style="width:100%">
+            <h4>Classic</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column fernanda">
+          <div class="contentf">
+          <img src="media/Fernanda-ipet-1.jpg" alt="Ipet" style="width:100%">
+            <h4>Classic</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column fernanda">
+          <div class="contentf">
+          <img src="media/Fernanda-e79-1.jpg" alt="E79" style="width:100%">
             <h4>Classic</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
         </div>
 
-        <div class="column people">
-          <div class="content">
-            <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+        <div class="column belen">
+          <div class="contentb">
+            <img src="media/belen-golos-1.jpg" alt="Car" style="width:100%">
             <h4>Girl</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
         </div>
-        <div class="column people">
-          <div class="content">
-          <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+        <div class="column belen">
+          <div class="contentb">
+          <img src="media/belen-esculturas.jpg" alt="Car" style="width:100%">
             <h4>Man</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
         </div>
-        <div class="column people">
-          <div class="content">
-          <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+        <div class="column belen">
+          <div class="contentb">
+          <img src="media/belen-chimpanses-1.jpg" alt="Car" style="width:100%">
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column belen">
+          <div class="contentb">
+          <img src="media/belen-colaboracion_emprendimiento.jpg" alt="Car" style="width:100%">
             <h4>Woman</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
