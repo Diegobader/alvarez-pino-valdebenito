@@ -28,81 +28,11 @@
   text-decoration: none;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: green;
 }
 
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  color: white;
-  background-color: #f59a40;
-}
-
-.dropdown-content j {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content j:hover {
-  color: white;
-  background-color: #f7554d;
-}
-
-.dropdown-content c {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content c:hover {
-  color: white;
-  background-color: #4c8df5;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 /* IMÁGEN DEL EQUIPO */
 
@@ -148,13 +78,13 @@ body{
     font-family:'DM Sans', sans-serif;
     font-weight:400;
     color:#373737;
-    background-color:#FFFFFF; /*el primer par es R, segundo es G y tercero es B*/
+    background-color:#FFFFFF;
 }
 
 h1, h2{
     font-family:'Space Mono', monospace;
-    color:#FFFFFF; /* lo básico, para evitar problemas */
-    color:grey; /* si el navegador lo entiende, lo usa */
+    color:#FFFFFF;
+    color:grey;
     text-align:center;
     position: relative;
     letter-spacing:0.1em;
@@ -364,7 +294,6 @@ body {
   font-family: Arial;
 }
 
-/* Center website */
 .main {
   margin: auto;
 }
@@ -374,18 +303,16 @@ body {
   margin: 10px -16px;
 }
 
-/* Add padding BETWEEN each column */
 .row,
 .row > .column {
   padding: 6px;
 }
 
-/* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 25%;
   height: 550px;
-  display: none; /* Hide all elements by default */
+  display: none;
 }
 
 @media screen and (max-width: 1300px){
@@ -407,14 +334,13 @@ body {
   }
 }
 
-/* Clear floats after rows */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Content */
+/* Contenido */
 .contentd {
   background: linear-gradient(to bottom left, #4c8df5, white, white , white, white, white , white, white);
   padding: 10px;
@@ -430,12 +356,23 @@ body {
   padding: 10px;
 }
 
-/* The "show" class is added to the filtered elements */
 .show {
   display: block;
 }
 
-/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: green;
+}
+
 .btnf {
   border: none;
   outline: none;
@@ -473,17 +410,4 @@ body {
 
 .btnd:hover {
   background-color: #4c8df5;
-}
-
-.btn {
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: lightgrey;
 }
